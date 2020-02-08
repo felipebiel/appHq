@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Personagens</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let personagem of personagens ">
+    <img src="{{ personagem.thumbnail.path+'.'+personagem.thumbnail.extension }}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{ personagem.name }}
+        {{ personagem.id }}
+      </ion-card-title>
+      <p>
+        <button ion-button color="danger" (click)="detalhes(personagem.id)">+ Detalhes</button>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

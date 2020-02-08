@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Eventos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let evento of eventos">
+        <img src="{{ evento.thumbnail.path+'.'+evento.thumbnail.extension }}"/>
+        <ion-card-content>
+          <ion-card-title>
+             {{ evento.title }}
+            </ion-card-title>
+          <p>
+            
+          </p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

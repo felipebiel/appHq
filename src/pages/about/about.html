@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Quadrinhos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let quadrinho of quadrinhos">
+        <img src="{{ quadrinho.thumbnail.path+'.'+quadrinho.thumbnail.extension }}"/>
+        <ion-card-content>
+          <ion-card-title>
+             {{ quadrinho.title }}
+            </ion-card-title>
+          <p>
+            
+          </p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
